@@ -11,7 +11,19 @@ const db = new sqlite3.Database('events.db', (err) => {
     console.log('Connected to the SQLite database');
 });
 
-db.serialize(function () {    
+// Helper function from MDN
+const getRandomFloat = function (min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+// Helper function from MDN
+const getRandomIntInclusive = function (min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+db.serialize(function () {
     // insert data into category table
     let statement = db.prepare("INSERT INTO category VALUES (?)");
     let categories = ['Recently Viewed' ,'Cultural Tours', 'Half-day Tours', 'Day Trips'];
@@ -26,7 +38,14 @@ db.serialize(function () {
     let statementTwo = db.prepare(`INSERT INTO event VALUES(?, ?, ?, ?, ?, ?)`);
     
     for (let index = 0; index < 100; index++) {
-        statementTwo.run(faker.random.number(), faker.commerce.price(), faker.random.number(), faker.address.country(), faker.image.imageUrl(), faker.random.number());        
+        statementTwo.run(
+            faker.random.number(),
+            faker.commerce.price(),
+            getRandomFloat(1, 5).toFixed(1),
+            faker.address.country(),
+            `./public/images/0${getRandomIntInclusive(1, 4)}.jpg`,
+            getRandomIntInclusive(1, 4)
+        );
     }
     statementTwo.finalize();
 
