@@ -62,3 +62,5 @@ db.close((err) => {
     }
     console.log('Closed database connection');
 });
+
+export default { db };

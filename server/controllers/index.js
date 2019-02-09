@@ -3,7 +3,7 @@ let models = require('../models');
 module.exports = {
     events: {
         get: function (req, res) {
-            console.log('req.params.id in controller:', req.params.id);
+            // console.log('req.params.id in controller:', req.params.id);
             models.events.get(req.params.id, function (err, data) {
                 // console.log('moo: callback');
                 

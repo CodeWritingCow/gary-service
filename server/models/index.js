@@ -3,7 +3,7 @@ const db = require('../db');
 module.exports = {
     events: {
         get: function (id, callback) {
-            console.log('id', id);
+            // console.log('id', id);
             
             let statement = `SELECT * FROM event WHERE rowId = ${id}`;
             // let id = userId;

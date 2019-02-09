@@ -18,3 +18,5 @@ let port = process.env.PORT || 3016;
 app.listen(port, function () {
     console.log(`Listening on port ${port}`);
 });
+
+module.exports = app;
