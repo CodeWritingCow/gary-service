@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const controller = require('./controllers');
 
 app.use(express.static(__dirname + '/../public'));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Test route
 app.get('/', (req, res) => {
