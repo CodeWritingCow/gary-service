@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('moo');
 });
 
-app.get('/api/events/:id', controller.events.get);
+app.get('/api/events/:id', controller.getEventById);
 
 let port = process.env.PORT || 3016;
 
