@@ -1,9 +1,9 @@
 let models = require('../models');
 
 const getEventById = function (req, res) {
-    models.events.get(req.params.id, (err, data) => {
+    models.getEventById(req.params.id, (err, data) => {
         if (err) {
-            res.sendStatus(500);
+            res.status(500).send({ error: err.message });
         } else {
             res.send(data);
         }
