@@ -1,0 +1,49 @@
+.event {
+    /* background-color: brown; */
+    padding: 12px;
+    width: 238px;
+    height: 270px;
+    font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
+}
+
+.event img {
+    width: 238px;
+    height: 223px;
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
+}
+
+.event img:hover {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+}
+
+.event .details {
+    padding-top: 10px;
+    height: 44px;
+    margin-bottom: -4px;
+}
+
+.event .name {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 20px;
+    color: #000a12;
+}
+
+.event .info {
+    /* margin-top: 0; */
+    margin-bottom: 4px;
+    color: #767676;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.event .price {
+    margin-top: 0;
+    color: #2c2c2c;
+    font-size: 14px;
+}
+
