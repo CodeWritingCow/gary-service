@@ -38,7 +38,7 @@ class App extends React.Component {
             console.log('error:', err);
         });
   }
-    // TODO: Refactor event info into an event component. i.e. <Event />
+
     render (props) {
         return (
             <div className="app">

@@ -1,19 +1,20 @@
 .event {
-    /* background-color: brown; */
     padding: 12px;
     width: 238px;
     height: 270px;
     font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
+    position: relative;
 }
 
-.event img {
+.event .image {
     width: 238px;
     height: 223px;
     -webkit-filter: brightness(90%);
     filter: brightness(90%);
+    background-size: cover;
 }
 
-.event img:hover {
+.event .image:hover {
     -webkit-filter: brightness(100%);
     filter: brightness(100%);
 }
@@ -47,3 +48,10 @@
     font-size: 14px;
 }
 
+.event .bookmark {
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    color: white;
+} 
