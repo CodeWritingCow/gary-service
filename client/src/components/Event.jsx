@@ -5,12 +5,11 @@ function Event ({props}) {
     
     return (
         <div className="event">
-            <img src={props.image_url} width="300px" alt="Photo" />
-            <h3>{props.name}</h3>
-            <p>{props.category}</p>
-            <p>Price: ${props.price}</p>
-            <p>Rating: {props.rating}</p>
-            <p>Reviews: {props.reviews_count}</p>
+            <img src={props.image_url} alt="Photo" />
+            <a className="name" href="#">{props.name}</a>
+            {/* <p>{props.category}</p> */}
+            <p className="info">Rating: {props.rating} {props.reviews_count} Reviews</p>
+            <p className="price">from ${props.price}*</p>
         </div>
     );
 }
