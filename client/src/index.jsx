@@ -24,7 +24,6 @@ class App extends React.Component {
     getEvent() {
         return axios.get('/api/events/1') // TODO: Replace '1' with dynamic value
         .then((response) => {
-            // console.log('response:', response.data[0]);
             this.setState({
             category: response.data[0].category,
             image_url: response.data[0].image_url,
