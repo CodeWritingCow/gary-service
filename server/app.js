@@ -14,6 +14,8 @@ app.get('/', (req, res) => {
 
 app.get('/api/events/:id', controller.getEventById);
 
+app.get('/api/categories/:id', controller.getEventsByCategory);
+
 let port = process.env.PORT || 3016;
 
 app.listen(port, function () {
