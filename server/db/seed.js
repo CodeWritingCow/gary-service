@@ -1,6 +1,6 @@
 // To create tables:
 // in command line, run 'sqlite3 events.db'
-// then in sqlite terminal, run '.read seed.sql'
+// then in sqlite terminal, run '.read schema.sql'
 
 const sqlite3 = require('sqlite3').verbose();
 const faker = require('faker');
@@ -43,7 +43,7 @@ db.serialize(function () {
             faker.commerce.price(),
             getRandomFloat(1, 5).toFixed(1),
             faker.address.country(),
-            `./public/images/0${getRandomIntInclusive(1, 4)}.jpg`,
+            `./images/0${getRandomIntInclusive(1, 4)}.jpg`,
             getRandomIntInclusive(1, 4)
         );
     }
