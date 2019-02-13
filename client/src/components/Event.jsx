@@ -25,6 +25,15 @@ function Event ({props}) {
             ratings.push(1);
         }
     }
+
+    let renderRatings = function () {
+        return ratings.map((num, index) => {
+            return <i className="fas fa-circle fa-xs"
+                    style={num === 0 ? ratingStyle : ratingStyleWhite}
+                    key={index}>
+                   </i>
+            });
+    }
     
     return (
         <div className="event">
@@ -33,7 +42,7 @@ function Event ({props}) {
             <div className="details">
                 <a className="name" href="#">{props.name}</a>
                 <div className="info">
-                    {ratings.map((num, index) => <i className="fas fa-circle fa-xs" style={num === 0 ? ratingStyle : ratingStyleWhite} key={index}></i>)} {props.reviews_count} Reviews
+                    {renderRatings()} {props.reviews_count} Reviews
                 </div>
                 <div className="price">from <strong>${props.price.toFixed(2)}*</strong></div>
             </div>
