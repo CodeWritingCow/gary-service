@@ -54,4 +54,8 @@
     right: 18px;
     top: 16px;
     color: white;
-} 
+}
+
+.bookmark:hover {
+    background-color: #00a680;
+}
