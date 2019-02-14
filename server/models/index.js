@@ -12,6 +12,19 @@ const getEventById = function (id, callback) {
         });
 }
 
+const getEventsByCategory = function (id, callback) {
+    let statement = `SELECT * FROM event WHERE category = ${id}`;
+        db.all(statement, (err, data) => {
+            if (err) {
+                callback(err, null);
+            } else {
+                // db.close();
+                return callback(null, data);
+            }
+        });
+}
+
 module.exports = {
-    getEventById: getEventById
+    getEventById: getEventById,
+    getEventsByCategory: getEventsByCategory
 }
