@@ -13,11 +13,11 @@ class Category extends React.Component {
     }
 
     componentDidMount() {
-        this.getEventsByCategory();
+        this.getEventsByCategory(this.props.categoryId);
     }
 
-    getEventsByCategory() {
-        return axios.get('/api/categories/1') // TODO: Replace '1' with dynamic value
+    getEventsByCategory(categoryId) {
+        return axios.get(`/api/categories/${categoryId}`)
             .then((response) => {
                 // console.log(response.data);                
                 this.setState({
@@ -44,7 +44,8 @@ class Category extends React.Component {
             <div className='category'>
                 <div>
                     <div>
-                        <a href="#" style={categoryStyle}>{this.state.category}</a>
+                        {/* <a href="#" style={categoryStyle}>{this.state.category}</a> */}
+                        <a href="#" style={categoryStyle}>{this.props.categoryId}</a>
                     </div>
                     {this.state.events.map((event, index) => <Event props={event} key={index} />)}
                 </div>
