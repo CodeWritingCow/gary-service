@@ -40,7 +40,9 @@ function Event ({props}) {
             <div className="inner image" style={{ 'backgroundImage': `url("${props.image_url}")` }}></div>
             <i className="far fa-bookmark fa-2x bookmark"></i>
             <div className="details">
-                <a className="name" href="#">{props.name}</a>
+                <a className="name" href="#">
+                    {props.name.length > 29 ? `${props.name.slice(0,29)}...` : props.name}
+                </a>
                 <div className="info">
                     {renderRatings()} {props.reviews_count} Reviews
                 </div>
