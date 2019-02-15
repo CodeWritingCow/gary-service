@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Category from './components/Category.jsx';
 import Event from './components/Event.jsx';
 
 class App extends React.Component {
@@ -41,6 +42,7 @@ class App extends React.Component {
     render (props) {
         return (
             <div className="app">
+                <Category />
                 <Event props={this.state} />
             </div>
         );
