@@ -42,8 +42,7 @@ class App extends React.Component {
     render (props) {
         return (
             <div className="app">
-                <Category />
-                <Event props={this.state} />
+                <Category props={this.state} />
             </div>
         );
     }

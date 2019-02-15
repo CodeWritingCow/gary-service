@@ -7,7 +7,8 @@ class Category extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            events: []
+            events: [],
+            category: 'Moo Day Trip' // TODO: Replace with dynamic value
         }
     }
 
@@ -20,7 +21,7 @@ class Category extends React.Component {
             .then((response) => {
                 // console.log(response.data);                
                 this.setState({
-                events: response.data.slice(0,4); // TODO: Return 4 events at random
+                events: response.data.slice(0,4) // TODO: Return 4 events at random
                 });
             })
             .catch((err) => {
@@ -29,9 +30,24 @@ class Category extends React.Component {
     }
 
     render(props) {
+        // console.log('category:', this.state);
+        let categoryStyle = {
+            'fontSize': '24px',
+            'fontWeight': '700',
+            'lineHeight': '28px',
+            'fontFamily': 'Arial,Tahoma,"Bitstream Vera Sans",sans-serif',
+            'textDecoration': 'none',
+            'color': 'black'
+        }
+        
         return (
-            <div>
-                <h1>Moo</h1>
+            <div className='category'>
+                <div>
+                    <div>
+                        <a href="#" style={categoryStyle}>{this.state.category}</a>
+                    </div>
+                    {this.state.events.map((event, index) => <Event props={event} key={index} />)}
+                </div>
             </div>
         );
     }
