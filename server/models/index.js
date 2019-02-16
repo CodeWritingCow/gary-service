@@ -24,7 +24,19 @@ const getEventsByCategory = function (id, callback) {
         });
 }
 
+const getCategoryNameById = function (id, callback) {
+    let statement = `SELECT category.name FROM category WHERE category.rowId = ${id}`;
+    db.all(statement, (err, data) => {
+        if (err) {
+            callback(err, null);
+        } else {
+            return callback(null, data);
+        }
+    });
+}
+
 module.exports = {
     getEventById: getEventById,
-    getEventsByCategory: getEventsByCategory
+    getEventsByCategory: getEventsByCategory,
+    getCategoryNameById: getCategoryNameById
 }

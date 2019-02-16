@@ -16,6 +16,8 @@ app.get('/api/events/:id', controller.getEventById);
 
 app.get('/api/categories/:id', controller.getEventsByCategory);
 
+app.get('/api/category/name/:id', controller.getCategoryNameById);
+
 let port = process.env.PORT || 3016;
 
 app.listen(port, function () {

@@ -20,7 +20,18 @@ const getEventsByCategory = function (req, res) {
     })
 }
 
+const getCategoryNameById = function (req, res) {
+    models.getCategoryNameById(req.params.id, (err, data) => {
+        if (err) {
+            res.status(500).send({ error: err.message });
+        } else {
+            res.send(data);
+        }
+    })
+}
+
 module.exports = {
     getEventById: getEventById,
-    getEventsByCategory: getEventsByCategory
+    getEventsByCategory: getEventsByCategory,
+    getCategoryNameById: getCategoryNameById
 }
