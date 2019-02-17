@@ -22,7 +22,7 @@ class Category extends React.Component {
             .then((response) => {
                 // console.log(response.data);                
                 this.setState({
-                events: response.data.slice(0,4) // TODO: Return 4 events at random
+                events: response.data // TODO: Return 4 events at random
                 });
             })
             .catch((err) => {
@@ -46,6 +46,7 @@ class Category extends React.Component {
     render(props) {
         // console.log('category:', this.state);
         let categoryStyle = {
+            'padding': '12px',
             'fontSize': '24px',
             'fontWeight': '700',
             'lineHeight': '28px',
@@ -59,9 +60,9 @@ class Category extends React.Component {
                 <div>
                     <div>
                         <a href="#" style={categoryStyle}>{this.state.category}</a>
-                        {/* <a href="#" style={categoryStyle}>{this.props.categoryId}</a> */}
+                        {this.state.events.length > 0 ? <span className="counter">({this.state.events.length})</span> : ''}
                     </div>
-                    {this.state.events.map((event, index) => <Event props={event} key={index} />)}
+                    {this.state.events.slice(0,4).map((event, index) => <Event props={event} key={index} />)}
                 </div>
             </div>
         );

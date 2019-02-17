@@ -1,5 +1,12 @@
 .category {
     padding: 12px;
+    margin-left: 40px;
+}
+
+.category .counter {
+    font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
+    font-size: 18px;
+    color: #767676;
 }
 
 .event {
