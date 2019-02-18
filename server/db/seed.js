@@ -43,7 +43,7 @@ db.serialize(function () {
             faker.commerce.price(),
             getRandomFloat(1, 5).toFixed(1),
             faker.address.country(),
-            `./images/0${getRandomIntInclusive(1, 4)}.jpg`,
+            `./images/${getRandomIntInclusive(1, 10)}.jpg`,
             getRandomIntInclusive(1, 4)
         );
     }

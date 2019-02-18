@@ -9,7 +9,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/app.js",
+    "start": "node server/app.js",
     "test": "jest --detectOpenHandles",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/app.js"
@@ -31,6 +31,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest": "^24.1.0",
+    "nodemon": "^1.18.10",
     "supertest": "^3.4.2",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"

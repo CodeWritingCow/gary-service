@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Category from './components/Category.jsx';
 import Event from './components/Event.jsx';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            categoryIds: [1,2,3,4], // TODO: Get ids from server instead of hardcoding them
             category: 2,
             image_url: 'images/01.jpg',
             name: 'Country Cow Dance',
@@ -41,7 +43,7 @@ class App extends React.Component {
     render (props) {
         return (
             <div className="app">
-                <Event props={this.state} />
+                {this.state.categoryIds.map(id => <Category props={this.state} categoryId={id} />)}
             </div>
         );
     }
