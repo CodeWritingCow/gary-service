@@ -1,15 +1,34 @@
 .category {
+    /* background-color: red; */
+    font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
     padding: 12px;
     margin-left: 40px;
+    display: inline-block;
+}
+
+.category .title {
+    /* background-color: gray; */
+    padding-right: 12px;
 }
 
 .category .counter {
-    font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
     font-size: 18px;
     color: #767676;
 }
 
+.category .seeall {
+    float: right;
+    font-size: 16px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.seeall:hover {
+    text-decoration: underline;
+}
+
 .event {
+    /* background-color: aqua; */
     padding: 12px;
     width: 238px;
     height: 270px;
