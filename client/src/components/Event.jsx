@@ -38,7 +38,12 @@ function Event ({props}) {
     return (
         <div className="event">
             <a href="#"><div className="inner image" style={{ 'backgroundImage': `url("${props.image_url}")` }}></div></a>
-            <i className="far fa-bookmark fa-2x bookmark"></i>
+            <i className="far fa-bookmark fa-2x bookmark"
+                onClick={()=>{
+                    props.bookmarked = true;
+                    // console.log(props);
+                }}>
+            </i>
             <div className="details">
                 <a className="name" href="#">
                     {props.name.length > 29 ? `${props.name.slice(0,29)}...` : props.name}
