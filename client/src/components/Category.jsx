@@ -57,7 +57,7 @@ class Category extends React.Component {
         
         return (
             <div className='category'>
-                <div>
+                <div style={{'width': 'max-content'}}>
                     <div className="title">
                         <a href="#" style={categoryStyle}>{this.state.category}</a>
                         {this.state.events.length > 0 ? <span className="counter">({this.state.events.length})</span> : ''}
