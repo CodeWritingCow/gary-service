@@ -24,7 +24,8 @@ class App extends React.Component {
     }
 
     getEvent() {
-        return axios.get('/api/events/1') // TODO: Replace '1' with dynamic value
+        // TODO: Replace hardcoded localhost IP with environmental variable
+        return axios.get('http://localhost:3016/api/events/1') // TODO: Replace '1' with dynamic value
         .then((response) => {
             this.setState({
             category: response.data[0].category,
@@ -43,7 +44,7 @@ class App extends React.Component {
     render (props) {
         return (
             <div className="app">
-                {this.state.categoryIds.map(id => <Category props={this.state} categoryId={id} />)}
+                {this.state.categoryIds.map((id, idx) => <Category props={this.state} categoryId={id} key={idx} />)}
             </div>
         );
     }
