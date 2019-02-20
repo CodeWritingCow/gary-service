@@ -37,7 +37,8 @@ function Event ({props}) {
     
     return (
         <div className="event">
-            <a href="#"><div className="inner image" style={{ 'backgroundImage': `url("${props.image_url}")` }}></div></a>
+            {/* TODO: Change hardcoded URL to dynamic environmental variable */}
+            <a href="#"><div className="inner image" style={{ 'backgroundImage': `url("http://localhost:3016/${props.image_url}")` }}></div></a>
             <i className="far fa-bookmark fa-2x bookmark"
                 onClick={()=>{
                     props.bookmarked = true;
