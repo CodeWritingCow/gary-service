@@ -9,7 +9,7 @@ const getEventById = function (req, res) {
         }
     });
 }
-
+ 
 const getEventsByCategory = function (req, res) {
     models.getEventsByCategory(req.params.id, (err, data) => {
         if (err) {
