@@ -50,4 +50,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('events'));
+ReactDOM.render(<App />, document.getElementById('Categories'));
