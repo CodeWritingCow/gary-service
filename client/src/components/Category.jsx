@@ -60,9 +60,9 @@ class Category extends React.Component {
             <div className='category'>
                 <div style={{'width': 'max-content'}}>
                     <div className="title">
-                        <a href="#" style={categoryStyle}>{this.state.category}</a>
+                        <a style={categoryStyle}>{this.state.category}</a>
                         {this.state.events.length > 0 ? <span className="counter">({this.state.events.length})</span> : ''}
-                        <a href="#" className="seeall">See all</a>
+                        <a className="seeall">See all</a>
                     </div>
                     {this.state.events.slice(0,4).map((event, index) => <Event props={event} key={index} />)}
                 </div>

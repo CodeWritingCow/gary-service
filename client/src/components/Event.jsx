@@ -38,7 +38,7 @@ function Event ({props}) {
     return (
         <div className="event">
             {/* TODO: Change hardcoded URL to dynamic environmental variable */}
-            <a href="#"><div className="inner image" style={{ 'backgroundImage': `url("http://localhost:3016/${props.image_url}")` }}></div></a>
+            <a><div className="inner image" style={{ 'backgroundImage': `url("http://localhost:3016/${props.image_url}")` }}></div></a>
             <i className="far fa-bookmark fa-2x bookmark"
                 onClick={()=>{
                     props.bookmarked = true;
@@ -46,7 +46,7 @@ function Event ({props}) {
                 }}>
             </i>
             <div className="details">
-                <a className="name" href="#">
+                <a className="name">
                     {props.name.length > 29 ? `${props.name.slice(0,29)}...` : props.name}
                 </a>
                 <div className="info">
