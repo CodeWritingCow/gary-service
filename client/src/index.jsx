@@ -25,7 +25,7 @@ class App extends React.Component {
 
     getEvent() {
         // TODO: Replace hardcoded localhost IP with environmental variable
-        return axios.get('http://localhost:3016/api/events/1') // TODO: Replace '1' with dynamic value
+        return axios.get('http://18.218.78.109/api/events/1') // TODO: Replace '1' with dynamic value
         .then((response) => {
             this.setState({
             category: response.data[0].category,

@@ -19,7 +19,7 @@ class Category extends React.Component {
 
     getEventsByCategory(categoryId) {
         // TODO: Replace hardcoded localhost IP with environmental variable
-        return axios.get(`http://localhost:3016/api/categories/${categoryId}`)
+        return axios.get(`http://18.218.78.109/api/categories/${categoryId}`)
             .then((response) => {
                 // console.log(response.data);                
                 this.setState({
@@ -32,7 +32,7 @@ class Category extends React.Component {
     }
 
     getCategoryNameById(categoryId) {
-        return axios.get(`http://localhost:3016/api/category/name/${categoryId}`)
+        return axios.get(`http://18.218.78.109/api/category/name/${categoryId}`)
             .then((response) => {
                 // console.log(response.data[0]);
                 this.setState({
