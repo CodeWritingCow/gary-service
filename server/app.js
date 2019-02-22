@@ -1,8 +1,10 @@
+const compression = require('compression');
 const express = require('express');
 const app = express();
 const controller = require('./controllers');
 const cors = require('cors');
 
+app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../public'));
