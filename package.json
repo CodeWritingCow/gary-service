@@ -33,6 +33,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "compression-webpack-plugin": "^2.0.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
