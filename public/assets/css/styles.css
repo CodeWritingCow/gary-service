@@ -1,0 +1,92 @@
+.category {
+    /* background-color: red; */
+    font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
+    padding: 12px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.category .title {
+    /* background-color: gray; */
+    padding-right: 12px;
+}
+
+.category .counter {
+    font-size: 18px;
+    color: #767676;
+}
+
+.category .seeall {
+    float: right;
+    font-size: 16px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.seeall:hover {
+    text-decoration: underline;
+}
+
+.event {
+    /* background-color: aqua; */
+    padding: 12px;
+    width: 238px;
+    height: 270px;
+    font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.event .image {
+    width: 238px;
+    height: 223px;
+    -webkit-filter: brightness(90%);
+    filter: brightness(90%);
+    background-size: cover;
+}
+
+.event .image:hover {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+}
+
+.event .details {
+    padding-top: 10px;
+    height: 44px;
+    margin-bottom: -4px;
+}
+
+.event .name {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 20px;
+    color: #000a12;
+}
+
+.event .info {
+    /* margin-top: 0; */
+    margin-bottom: 4px;
+    color: #767676;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.event .price {
+    margin-top: 0;
+    color: #2c2c2c;
+    font-size: 14px;
+}
+
+.event .bookmark {
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    color: white;
+}
+
+.bookmark:hover {
+    background-color: #00a680;
+}
