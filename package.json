@@ -10,6 +10,7 @@
   },
   "scripts": {
     "start": "node server/app.js",
+    "build": "webpack --mode \"production\"",
     "test": "jest --detectOpenHandles",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/app.js"
