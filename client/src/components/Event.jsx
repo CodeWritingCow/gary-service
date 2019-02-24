@@ -19,7 +19,8 @@ function Event ({props}) {
 
     let ratings = [];
     for (let index = 0; index < 5; index++) {
-        if (index < Math.round(props.rating)) { // TODO: Show half dots for ratings such as 4.5
+        // TODO: Show half dots for ratings such as 4.5
+        if (index < Math.round(props.rating)) {
             ratings.push(0);
         } else {
             ratings.push(1);
@@ -42,7 +43,6 @@ function Event ({props}) {
             <i className="far fa-bookmark fa-2x bookmark"
                 onClick={()=>{
                     props.bookmarked = true;
-                    // console.log(props);
                 }}>
             </i>
             <div className="details">

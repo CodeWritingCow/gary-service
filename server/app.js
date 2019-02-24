@@ -18,15 +18,8 @@ app.use(express.static(__dirname + '/../public'));
 app.use(express.static(__dirname + '/../client/dist'));
 app.use(cors());
 
-// Test route
-// app.get('/', (req, res) => {
-//     res.send('moo');
-// });
-
 app.get('/api/events/:id', controller.getEventById);
-
 app.get('/api/categories/:id', controller.getEventsByCategory);
-
 app.get('/api/category/name/:id', controller.getCategoryNameById);
 
 let port = process.env.PORT || 3016;
