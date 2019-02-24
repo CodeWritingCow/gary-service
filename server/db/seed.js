@@ -1,7 +1,3 @@
-// To create tables:
-// in command line, run 'sqlite3 events.db'
-// then in sqlite terminal, run '.read schema.sql'
-
 const sqlite3 = require('sqlite3').verbose();
 const faker = require('faker');
 const db = new sqlite3.Database('events.db', (err) => {
@@ -63,4 +59,4 @@ db.close((err) => {
     console.log('Closed database connection');
 });
 
-export default { db };
+// export default { db };
