@@ -31,12 +31,11 @@ In browser, visit 'localhost:3016'
 
 In terminal, change directory to server/db. Run `node seed.js`.
 
-> To edit the database's schema tables (not 
+> To edit the database's schema tables
 
 Open server/db/schema.sql in a code editor. Make changes and save.
 
-Open terminal and change directory to server/db. Run `sqlite3 events.db`;
-this opens the mock database with the sqlite3 terminal.
+Open terminal and change directory to server/db. Run `sqlite3 events.db` to open the mock database inside the sqlite3 terminal. (See instructions below in "Development" for installing sqlite3.)
 
 In sqlite3 terminal, run `.read schema.sql`. This updates the database's table structures.
 
