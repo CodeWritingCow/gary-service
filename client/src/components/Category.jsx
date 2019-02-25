@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import axios from "axios";
 import Event from './Event.jsx';
+import { config } from '../config.js';
 
 class Category extends React.Component {
     constructor(props) {
@@ -18,8 +19,9 @@ class Category extends React.Component {
     }
 
     getEventsByCategory(categoryId) {
-        // TODO: Replace hardcoded localhost IP with environmental variable
-        return axios.get(`http://18.218.78.109/api/categories/${categoryId}`)
+        let url = config.HOSTNAME === 'localhost' ? config.LOCALHOST : config.AWS_URL;
+        
+        return axios.get(`${url}/api/categories/${categoryId}`)
             .then((response) => {
                 this.setState({
                 events: response.data // TODO: Return 4 events at random
@@ -31,7 +33,9 @@ class Category extends React.Component {
     }
 
     getCategoryNameById(categoryId) {
-        return axios.get(`http://18.218.78.109/api/category/name/${categoryId}`)
+        let url = config.HOSTNAME === 'localhost' ? config.LOCALHOST : config.AWS_URL;
+
+        return axios.get(`${url}/api/category/name/${categoryId}`)
             .then((response) => {
                 this.setState({
                     category: response.data[0].name
