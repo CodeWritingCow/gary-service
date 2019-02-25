@@ -41,6 +41,9 @@ In sqlite3 terminal, run `.read schema.sql`. This updates the database's table s
 
 Run `.quit` to close the sqlite3 terminal. Be sure to seed the database with new data; see instructions above.
 
+> Once you deploy your server to an AWS EC2 instance
+
+Go to `client/src/config.js` and change the `AWS_URL`'s IP to your AWS instance's IPv4 Public IP.
 
 ## Requirements
 
